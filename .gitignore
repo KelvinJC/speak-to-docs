@@ -11,3 +11,5 @@ pyvenv.cfg
 *.DS_Store
 *.venv/
 *.wav
+speech_outputs/
+temp_dir/

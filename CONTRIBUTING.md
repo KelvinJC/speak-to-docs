@@ -73,8 +73,12 @@ The **Speech-Enabled RAG Solution** is a voice-powered interface that allows use
 The project is structured as follows:
 - **speech_to_docs**: This is the main directory for the project.
 - **speech_to_docs/src**: This directory contains all the files that will house all the functionalities of the project: Speech transcription and synthesis, RAG model Solution and document reading.
-- **speech_to_docs/src/rag_functions.py**: This file contains the function that checks for uploaded file compatibility, making sure it doesn't exceed 50 pages limit as well as the RAG model solution functionalities.
+- **speech_to_docs/src/rag_functions.py**: This file contains functions for checking the uploaded file compatibility, making sure files do not exceed a 50-page limit. It also includes functionalities for processing various document types (PDF, PPTX, TXT) to extract content using Azure Document Intelligence. It provides detailed logging for error handling and tracks the extraction process, saving the output in a user-friendly text format.
+
 - **speech_to_docs/src/speech_io.py**: This files handles the speech_to_text/ text_to_speech function of the model by using **Azure Cognitive Services: Speech Transcription** (Speech-to-Text) and **Speech Synthesis** (Text-to-Speech).
+- **speech_to_docs/.gitignore**: This contains all the folder and files that are not to be pushed to GitHub (e.g. .env, bin/ e.t.c)
+- **speech_to_docs/main.py**: The main.py script serves as the core interface for the Speech-Enabled RAG Solution, facilitating voice interactions with documents through Azure AI Services for speech transcription and synthesis, while managing user interactions and session states.
+
 - **speech_to_docs/requirements.txt**: This file lists the dependencies required to run the project.
 - **speech_to_docs/README.md**: This file contains information about the project, including this guide
 - **speech_to_docs/LICENSE**: This file contains the license information for the project.
@@ -112,3 +116,4 @@ The project is structured as follows:
 7. [Azure OpenAI Models: Deployment](https://learn.microsoft.com/azure/ai-services/openai/how-to/working-with-models?tabs=powershell?wt.mc_id=studentamb_405806)
 8. [Azure Speech Service documentation](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/?wt.mc_id=studentamb_217190)
 9. [Develop Generative AI solutions with Azure OpenAI Service](https://learn.microsoft.com/en-us/training/paths/develop-ai-solutions-azure-openai/?wt.mc_id=studentamb_217190)
+10. [Langchain's DocArrayInMemoryStore Documentation](https://python.langchain.com/docs/integrations/vectorstores/docarray_in_memory/)
